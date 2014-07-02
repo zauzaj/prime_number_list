@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path('../../lib',__FILE__)
+require 'prime_number'
+
+puts "Insert your starting value"
+	starting_value = gets.chomp
+puts "Insert your ending value"
+	ending_value = gets.chomp
+	prime_number = PrimeNumber.new(starting_value, ending_value)
+	primes_list = prime_number.run
+
+	puts "Prime numbers in (#{starting_value}..#{ending_value}) range #{primes_list}"
